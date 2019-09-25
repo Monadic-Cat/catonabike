@@ -50,7 +50,7 @@ So that's neat.
 In the early months of this year, I wrote a web app to manage the tiniest
 character sheet I've ever seen. For a table top roleplaying game I was
 (and still am, at time of posting)
-playing on Discord - [[https://magpiegames.com/masks][Masks]]. It's a game my group probably plays a little wrong,
+playing on Discord - [[https://www.magpiegames.com/masks][Masks]]. It's a game my group probably plays a little wrong,
 but it's so freeform that it's impossible to tell and it doesn't matter.
 I have dubbed this manager [[https://mam.catona.bike][MAM]], for MAsks Manager.
 As ever, I provide the thing under the [[https://github.com/Monadic-Cat/mam/blob/master/LICENSE][GNU AGPLv3 (or later, at your option)]][fn:3],
@@ -69,7 +69,7 @@ This has been me, telling you about a thing I had fun making. Have a nice day.
 
 * Footnotes
 
-[fn:3] [[https://gnu.org/licenses/#AGPL][Information about the GNU AGPL]]. Many thanks to the folks at Magpie Games
+[fn:3] [[https://gnu.org/licenses/#AGPL][Information about the GNU AGPL]]. Many thanks to the folks at [[https://www.magpiegames.com][Magpie Games]]
 for releasing much of their content under the [[https://creativecommons.org/licenses/by/4.0/][CC BY 4.0]]!
 
 [fn:2] Heck, I have a few in mind that I've been putting off. If anyone
