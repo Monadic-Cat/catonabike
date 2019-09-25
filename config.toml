@@ -1,4 +1,4 @@
-baseURL = "http://www.catonabike.bike/"
+baseURL = "http://www.catona.bike/"
 languageCode = "en-us"
 title = "Cat on a Bike"
 theme = "ananke"
