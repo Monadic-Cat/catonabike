@@ -57,11 +57,13 @@ As ever, I provide the thing under the [[https://github.com/Monadic-Cat/mam/blob
 so people can feel free to mod the carp out of it or add features it's lacking
 and host their own versions[fn:1]. I'm no expert in UX, so I just made
 the thing as comfortable to use for myself and the others in my group
-as I could manage. There's essentially no styling or polish, just the bare
+as I could manage. There's essentially no styling or polish, just bare
 "I can click the things to change the things" functionality.
- Improvements are welcome[fn:2]! I hear there are other
-games that use approximately the same system as Masks, so I bet MAM could find
-use with those too.
+ Improvements are welcome![fn:2]
+
+I hear there are other games that use approximately the same system as Masks,
+so I bet MAM could find use with those too. Further musings on how
+I might structure such a project are forthcoming.
 
 This has been me, telling you about a thing I had fun making. Have a nice day.
 
