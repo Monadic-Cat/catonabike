@@ -1,4 +1,3 @@
 [build]
-base = "."
 publish = "public/"
 command = "emacs --batch -l build.el && hugo"
