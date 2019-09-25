@@ -42,7 +42,7 @@ println!("{}", roll("2d6 + 3").format(MiceFormat::new()
 #+END_SRC
 
 So that's neat.
-*** TODO MAM - A Small Character Sheet                            :mam:masks:
+*** DONE MAM - A Small Character Sheet                            :mam:masks:
     :PROPERTIES:
     :EXPORT_DATE: <2019-09-25 Wed>
     :EXPORT_FILE_NAME: mam---a-small-character-sheet
@@ -69,8 +69,10 @@ This has been me, telling you about a thing I had fun making. Have a nice day.
 
 * Footnotes
 
+[fn:4] [[https://www.magpiegames.com/shop/][Buy]] their stuff. Support the awesome.
+
 [fn:3] [[https://gnu.org/licenses/#AGPL][Information about the GNU AGPL]]. Many thanks to the folks at [[https://www.magpiegames.com][Magpie Games]]
-for releasing much of their content under the [[https://creativecommons.org/licenses/by/4.0/][CC BY 4.0]]!
+for releasing much of their content under the [[https://creativecommons.org/licenses/by/4.0/][CC BY 4.0]]![fn:4]
 
 [fn:2] Heck, I have a few in mind that I've been putting off. If anyone
 wants to contribute their own implementations, check out the [[https://github.com/Monadic-Cat/mam/#mam-masks-manager][roadmap]].
