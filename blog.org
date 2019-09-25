@@ -71,7 +71,7 @@ This has been me, telling you about a thing I had fun making. Have a nice day.
 for releasing much of their content under the [[https://creativecommons.org/licenses/by/4.0/][CC BY 4.0]]!
 
 [fn:2] Heck, I have a few in mind that I've been putting off. If anyone
-wants to contribute their own implementations, check out the [[https://github.com/Monadic-Cat/mam#roadmap][roadmap]].
+wants to contribute their own implementations, check out the [[https://github.com/Monadic-Cat/mam/#mam-masks-manager][roadmap]].
 
 [fn:1] Provided you give the same freedom to anyone you share your version with,
 that is. I suggest making it a publicly hosted Git repository, like mine.
