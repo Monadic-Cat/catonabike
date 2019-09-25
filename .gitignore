@@ -1,0 +1,6 @@
+*.html
+*~
+/.cask
+/public
+/content
+

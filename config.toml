@@ -1,0 +1,6 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Cat on a Bike"
+theme = "ananke"
+[params]
+mainSections = [ "blog" ]
