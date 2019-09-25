@@ -27,8 +27,51 @@ Hi! I'm Monadic Cat.
 ** Programming                                                 :@programming:
 *** TODO Announcing mice!                                         :mice:rust:
     :PROPERTIES:
-    :EXPORT_DATE: <2019-09-24 Tue>
+    :EXPORT_DATE: <2019-09-25 Wed>
     :EXPORT_FILE_NAME: announcing-mice
     :END:
 For the past few months, I have been working on and off on a
-dice handling library for Rust.
+dice handling library for Rust. Work is not over, but
+I think it's the best option for simple dice work in Rust.
+
+#+BEGIN_SRC rust
+use mice::prelude::*;
+println!("{}", roll("2d6 + 3"));
+println!("{}", roll("2d6 + 3").format(MiceFormat::new()
+                                      .total_right()));
+#+END_SRC
+
+So that's neat.
+*** TODO MAM - A Small Character Sheet                            :mam:masks:
+    :PROPERTIES:
+    :EXPORT_DATE: <2019-09-25 Wed>
+    :EXPORT_FILE_NAME: mam---a-small-character-sheet
+    :END:
+In the early months of this year, I wrote a web app to manage the tiniest
+character sheet I've ever seen. For a table top roleplaying game I was
+(and still am, at time of posting)
+playing on Discord - [[https://magpiegames.com/masks][Masks]]. It's a game my group probably plays a little wrong,
+but it's so freeform that it's impossible to tell and it doesn't matter.
+I have dubbed this manager [[https://mam.catona.bike][MAM]], for MAsks Manager.
+As ever, I provide the thing under the [[https://github.com/Monadic-Cat/mam/blob/master/LICENSE][GNU AGPLv3 (or later, at your option)]][fn:3],
+so people can feel free to mod the carp out of it or add features it's lacking
+and host their own versions[fn:1]. I'm no expert in UX, so I just made
+the thing as comfortable to use for myself and the others in my group
+as I could manage. There's essentially no styling or polish, just the bare
+"I can click the things to change the things" functionality.
+ Improvements are welcome[fn:2]! I hear there are other
+games that use approximately the same system as Masks, so I bet MAM could find
+use with those too.
+
+This has been me, telling you about a thing I had fun making. Have a nice day.
+
+* Footnotes
+
+[fn:3] [[https://gnu.org/licenses/#AGPL][Information about the GNU AGPL]]. Many thanks to the folks at Magpie Games
+for releasing much of their content under the [[https://creativecommons.org/licenses/by/4.0/][CC BY 4.0]]!
+
+[fn:2] Heck, I have a few in mind that I've been putting off. If anyone
+wants to contribute their own implementations, check out the [[https://github.com/Monadic-Cat/mam#roadmap][roadmap]].
+
+[fn:1] Provided you give the same freedom to anyone you share your version with,
+that is. I suggest making it a publicly hosted Git repository, like mine.
