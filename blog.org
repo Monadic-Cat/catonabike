@@ -20,7 +20,6 @@ The blog of a pseudonymous person whose words you're reading right now.
 Hi! I'm Monadic Cat.
 
 [[https://github.com/Monadic-Cat][My GitHub Profile]]
-[[https://cdn.discordapp.com/attachments/430869462762258434/626453758918000650/image0.jpg]]
 
 * Posts
   :PROPERTIES:
