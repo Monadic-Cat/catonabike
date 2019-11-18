@@ -1,5 +1,6 @@
 #+STARTUP: content
 #+AUTHOR: Monadic Cat
+#+EMAIL: greenmonadcat@gmail.com
 #+HUGO_BASE_DIR: .
 #+HUGO_AUTO_SET_LASTMOD: t
 
@@ -19,26 +20,102 @@ The blog of a pseudonymous person whose words you're reading right now.
 Hi! I'm Monadic Cat.
 
 [[https://github.com/Monadic-Cat][My GitHub Profile]]
+[[https://cdn.discordapp.com/attachments/430869462762258434/626453758918000650/image0.jpg]]
 
 * Posts
   :PROPERTIES:
   :EXPORT_HUGO_SECTION: blog
   :END:
 ** Programming                                                 :@programming:
+*** TODO Three New Initiatives                                    :mice:
+    :PROPERTIES:
+    :EXPORT_DATE: <2019-10-14 Mon>
+    :EXPORT_FILE_NAME: two-new-initiatives
+    :END:
+=mice= is an incomplete solution at best, a 40% hack at worst.
+It needs a great deal more capability, or at least API surface and stability,
+before it can handle all dice forever as I envision it doing.
+**** Parser
+**** Evaluator
+**** Contributors
+*** TODO A New Purpose!                                                :mice:
+    :PROPERTIES:
+    :EXPORT_DATE: <2019-10-14 Mon>
+    :EXPORT_FILE_NAME: a-new-purpose
+    :END:
+From the beginning, =mice= has been focused on using a dice expression once
+you /had/ it. In my expanding wants for =mbot= and =cmice=, I have
+encountered a rather prickly issue with this.
+
+How do you get the dice expression?
+
+Currently, to feed a dice expression into =mice=, you must somehow already
+know that you have precisely what constitutes a dice expression. If your
+user input contains other things, you need to be able to strip that out
+on your own. You need to recognize, at least, the beginning of a dice
+expression and, preferably, the end as well. To do this, you need to know
+what constitutes a dice expression-
+the parts and the nature of their arrangement.
+
+But... that sounds like you need to implement a parser,
+and hasn't =mice= already done that?
+
+It has, but its API doesn't expose the capabilities required to do
+something like this. That needs to change.
+
+Thus, I am going to rework =mice='s parser with a focus on introspection.
+(Mainly, this means redoing its error handling.)
+
+*** TODO Mice internals                                           :mice:rust:
+    :PROPERTIES:
+    :EXPORT_DATE: <2019-10-12 Sat>
+    :EXPORT_FILE_NAME: mice-internals
+    :END:
+When I first wrote =mice=, it was with the intent of crafting something
+quickly that would solve the problem I was facing. I just wanted a dice rolling
+Discord bot, and the crates I saw didn't cut it.
+So, I wrote a quick =nom= parser for dice expressions, a quick evaluator for them,
+and returned the total.
+I then wanted to format the output nicely, but I wasn't sure if I wanted to keep
+my code structured how it was at the time, so I tacked on a function that output
+a formatted string instead of just the total of a roll.
+
+I was right.
+
+Then I made it so a =roll= would return a nice little =ExpressionResult=
+struct that provided both of those things, a =total()= and a =Display= impl.
+That's the current API, with the addition of a =RollBuilder= thingy for
+slightly more involved usage.
+And a =FormatOptions= thingy for changing the formatting.
+
+My entire original use case has been fulfilled.
+But, a new one has made its debut. A game I am going to play, called Shadowrun,
+requires exploding dice. =mice=, as it is right now, cannot do exploding dice.
+
+Now, I intend something a bit wacky.
+No. Something greater. I would like to solve dice.
+Properly. Exploding dice are a start, but I cannot foresee all possible dice systems.
+So, I would like to make a system to more easily program dice evaluation.
+Moreover, since I cannot forsee all uses for dice systems, this system's execution
+must mirror, and provide hooks for, true human dice rolling as closely as possible.
+
 *** TODO Announcing mice!                                         :mice:rust:
     :PROPERTIES:
-    :EXPORT_DATE: <2019-09-25 Wed>
+    :EXPORT_DATE: <2019-10-13 Sun>
     :EXPORT_FILE_NAME: announcing-mice
     :END:
 For the past few months, I have been working on and off on a
-dice handling library for Rust. Work is not over, but
-I think it's the best option for simple dice work in Rust.
+dice handling library for Rust. I'm not done, but
+I think it's the best option for (very) simple dice work in Rust.
 
 #+BEGIN_SRC rust
-use mice::prelude::*;
-println!("{}", roll("2d6 + 3"));
-println!("{}", roll("2d6 + 3").format(MiceFormat::new()
-                                      .total_right()));
+  use mice::prelude::*;
+  println!("{}", roll("2d6 + 3"));
+  println!("{}", roll("2d6 + 3").format(MiceFormat::new()
+                                          .total_right()));
+  let exp = "9d8 + 4d2 - 5 - 8d7";
+  println!("{}", roll(exp).format(MiceFormat::new()
+                                  .total_right()));
 #+END_SRC
 
 So that's neat.
@@ -66,6 +143,13 @@ so I bet MAM could find use with those too. Further musings on how
 I might structure such a project are forthcoming.
 
 This has been me, telling you about a thing I had fun making. Have a nice day.
+
+** Magic                                                             :@magic:
+*** TODO What is Magic?
+    :PROPERTIES:
+    :EXPORT_DATE: <2019-10-03 Thu>
+    :EXPORT_FILE_NAME: what-is-magic?
+    :END:
 
 * Footnotes
 
