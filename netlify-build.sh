@@ -1,6 +1,7 @@
 #!/bin/sh
 
 make clean
+mkdir -p static
 
 if [ ! -d "ox-hugo" ] ; then
     git clone https://github.com/kaushalmodi/ox-hugo.git
