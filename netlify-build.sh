@@ -1,5 +1,7 @@
 #!/bin/sh
 
+make clean
+
 if [ ! -d "ox-hugo" ] ; then
     git clone https://github.com/kaushalmodi/ox-hugo.git
 fi
